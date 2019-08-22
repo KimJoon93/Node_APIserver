@@ -3,7 +3,8 @@ var router = express.Router();
 const userController = require('../controllers')
 
 router.get('/', userController.basicAPI);
-router.get('/test', userController.testAPI);
-router.post('/post_test', userController.postTestAPI);
+router.get('/test', userController.testAPI)
+router.post('/post_test', userController.postTestAPI)
+// router.get('/visitDate',userController.visitDate)
 
 module.exports = router;

@@ -17,8 +17,16 @@ function postTestAPI(req,res){
     })
 }
 
+// function visitDate(req,res){
+//     const visitDate
+//     res.status(200).json({
+//         "visitDate" : visitDate
+//     })
+// }
+
 module.exports = {
     basicAPI: basicAPI,
     testAPI: testAPI,
     postTestAPI: postTestAPI,
+    // visitDate: visitDate
 }
