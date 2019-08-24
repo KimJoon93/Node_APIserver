@@ -2,6 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var session = require('session');
 var logger = require('morgan');
 var fs = require('fs');
 
@@ -26,6 +27,12 @@ app.use(logger({
   format: ':date',
   stream: fs.createWriteStream('app.log', {'flags': 'w'})
 }));
+
+app.use(session({
+  secret: '@#@$MYSIGN#@$#$',
+  resave: false,
+  saveUninitialized: true
+ }));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
