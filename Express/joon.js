@@ -1,4 +1,5 @@
 var express = require('express');
+var firebase = require('firebase');
 var app = express();
 
 /* 이미지 파일, css file, js file 가져올 수 있음 */ 
