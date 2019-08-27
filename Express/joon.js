@@ -13,6 +13,17 @@ app.get('/aaa', function(req, res, next){
 
 });
 
+firebase.initializeApp({
+  apiKey: "APIkey",
+  authDomain: "Everytalent.firebaseapp.com",         // Auth with popup/redirect
+  databaseURL: "https://everytalent-b6951.firebaseio.com/", // Realtime Database
+  messagingSenderId: "everytalent-b6951"
+})
+
+app.use('/data',function(req,res){
+
+});
+
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
